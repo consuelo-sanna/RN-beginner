@@ -14,38 +14,10 @@ import {
   CREATE_CONTACT,
   SETTINGS,
 } from '../constants/routeNames';
-
-const Contacts = () => {
-  return (
-    <View>
-      <Text>Hi From contacts</Text>
-    </View>
-  );
-};
-
-const ContactDetail = () => {
-  return (
-    <View>
-      <Text>Hi From ContactDetail</Text>
-    </View>
-  );
-};
-
-const CreateContact = () => {
-  return (
-    <View>
-      <Text>Hi From CreateContact</Text>
-    </View>
-  );
-};
-
-const Settings = () => {
-  return (
-    <View>
-      <Text>Hi From Settings</Text>
-    </View>
-  );
-};
+import Contacts from '../screens/contacts/index';
+import ContactDetail from '../screens/contactDetail/index';
+import CreateContact from '../screens/createContact/index';
+import Settings from '../screens/settings/index';
 
 const HomeNavigator = () => {
   const HomeStack = createStackNavigator();

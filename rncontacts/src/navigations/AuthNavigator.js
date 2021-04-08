@@ -1,30 +1,15 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import {Text, View} from 'react-native';
 import {LOGIN, REGISTER} from '../constants/routeNames';
-
-const Login = () => {
-  return (
-    <View>
-      <Text>Hi From Login</Text>
-    </View>
-  );
-};
-
-const SignUp = () => {
-  return (
-    <View>
-      <Text>Hi From SignUp</Text>
-    </View>
-  );
-};
+import Login from '../screens/login';
+import Register from '../screens/register';
 
 const AuthNavigator = () => {
   const AuthStack = createStackNavigator();
   return (
     <AuthStack.Navigator>
       <AuthStack.Screen name={LOGIN} component={Login} />
-      <AuthStack.Screen name={REGISTER} component={SignUp} />
+      <AuthStack.Screen name={REGISTER} component={Register} />
     </AuthStack.Navigator>
   );
 };
