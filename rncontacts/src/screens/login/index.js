@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {Text} from 'react-native';
 import Container from '../../components/commons/container/index';
 import Input from '../../components/commons/Input/index';
+import CustomButton from '../../components/commons/CustomButton/index';
 
 const Login = () => {
   const [value1, onChangeText1] = useState('');
@@ -22,6 +23,11 @@ const Login = () => {
         icon={<Text>HIDE</Text>}
         iconPosition="right"
       />
+      <CustomButton title="Submit" secondary loading={true} disabled={true} />
+      <CustomButton title="Click Me" secondary />
+      <CustomButton title="Submit" primary loading={true} />
+
+      <CustomButton title="Submit" danger />
     </Container>
   );
 };
