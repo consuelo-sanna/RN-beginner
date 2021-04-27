@@ -8,9 +8,14 @@
 import 'react-native-gesture-handler';
 import React from 'react';
 import AppNavContainer from './src/navigations';
+import GlobalProvider from './src/context/Provider.js';
 
 const App = () => {
-  return <AppNavContainer />;
+  return (
+    <GlobalProvider>
+      <AppNavContainer />
+    </GlobalProvider>
+  );
 };
 
 export default App;
