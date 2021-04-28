@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import RegisterComponent from '../../components/signup';
+// import envs from '../../config/env';
 
 const Register = () => {
   const [form, setForm] = useState({});
@@ -20,8 +21,6 @@ const Register = () => {
   };
 
   const onSubmit = () => {
-    // validations
-    console.log('work ', form);
     if (!form.firstName) {
       setErrors(prev => {
         return {...prev, firstName: 'Please add a first name'};
