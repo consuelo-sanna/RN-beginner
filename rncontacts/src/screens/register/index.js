@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import RegisterComponent from '../../components/signup';
-// import envs from '../../config/env';
+import envs from '../../config/env';
 
 const Register = () => {
   const [form, setForm] = useState({});
