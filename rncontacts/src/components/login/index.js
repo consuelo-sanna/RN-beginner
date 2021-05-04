@@ -7,6 +7,7 @@ import Container from '../../components/commons/container/index';
 import CustomButton from '../../components/commons/CustomButton/index';
 import Input from '../../components/commons/Input/index';
 import styles from './styles';
+import Message from '../commons/Message';
 
 const LoginComponent = () => {
   const {navigate} = useNavigation();
@@ -23,6 +24,16 @@ const LoginComponent = () => {
       <View>
         <Text style={styles.title}>Welcome to RN-Contacts</Text>
         <Text style={styles.subtitle}>Please login here</Text>
+
+        <Message
+          retry
+          retryFn={() => console.log('hello world')}
+          primary
+          onDismiss={() => {}}
+          message="invalid credentials"
+        />
+        <Message onDismiss={() => {}} danger message="invalid credentials" />
+
         <View style={styles.form}>
           <Input
             label="Username"
